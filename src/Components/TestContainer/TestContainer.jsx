@@ -1,11 +1,12 @@
 import React from 'react'
+import { TryAgain } from '../TryAgain/TryAgain';
 import './TestContainer.css';
 
-export const TestContainer = () => {
+export const TestContainer = ({ words, characters, wpm }) => {
     return (
         <div className='test-container'>
             <div className='try-again-container'>
-                <h1>This is a try again container</h1>
+                <TryAgain words={words} characters={characters} wpm={wpm} />
             </div>
         </div>
     )
