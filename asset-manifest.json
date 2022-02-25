@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ReactFlashtype/static/css/main.f22a18e4.css",
+    "main.js": "/ReactFlashtype/static/js/main.75f9b08e.js",
+    "static/media/hero.png": "/ReactFlashtype/static/media/hero.96e141d3fe30913c3117.png",
+    "static/media/logo.png": "/ReactFlashtype/static/media/logo.904ac8fd0f7b25e86967.png",
+    "index.html": "/ReactFlashtype/index.html",
+    "main.f22a18e4.css.map": "/ReactFlashtype/static/css/main.f22a18e4.css.map",
+    "main.75f9b08e.js.map": "/ReactFlashtype/static/js/main.75f9b08e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f22a18e4.css",
+    "static/js/main.75f9b08e.js"
+  ]
+}
