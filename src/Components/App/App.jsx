@@ -12,21 +12,47 @@ const serviceUrl = 'http://metaphorpsum.com/paragraphs/1/9';
 
 class App extends React.Component {
     state = {
-        selectedParagraph: "My name is sani.",
-        timerStarted: true,
+        selectedParagraph: "my name is sani",
+        timerStarted: false,
         timeRemaining: TotalTime,
         words: 0,
         characters: 0,
-        wpm: 0
+        wpm: 0,
+        testInfo: []
     }
 
+
+
     componentDidMount() {
-        fetch(serviceUrl)
-            .then(response => response.text())
-            .then(information => {
-                this.setState({ selectedParagraph: information });
-            })
+        // fetch(serviceUrl)
+        //     .then(response => response.text())
+        //     .then(information => {
+        //         this.setState({ selectedParagraph: information });
+        //     });
+        const selectedParagraphArray = this.state.selectedParagraph.split("");
+        const testInfo = selectedParagraphArray.map((selectedLetter) => {
+            return {
+                testLetter: selectedLetter,
+                status: "notAttempted",
+            };
+        });
+        this.setState({ testInfo });
     }
+
+    startTimer = () => {
+        this.setState({ timerStarted: true });
+        const timer = setInterval(() => {
+            if (this.state.timeRemaining > 0)
+                this.setState({ timeRemaining: this.state.timeRemaining - 1 });
+            else
+                clearInterval(timer);
+        }, 1000);
+    };
+
+    handleUserInput = (inputValue) => {
+        if(!this.state.timerStarted) this.startTimer();
+    }
+
 
     render() {
         return (
@@ -39,6 +65,8 @@ class App extends React.Component {
                     wpm={this.state.wpm}
                     timeRemaining={this.state.timeRemaining}
                     timerStarted={this.state.timerStarted}
+                    testInfo={this.state.testInfo}
+                    onInputChange={this.handleUserInput}
                 />
                 <Footer />
             </div>

@@ -1,0 +1,16 @@
+.test-letter {
+    font-size: 19px;
+    line-height: 19px;
+}
+
+.test-letter-correct {
+    color: rgb(144, 247, 144);
+}
+
+.test-letter-incorrect {
+    color: rgb(236, 122, 87);
+}
+
+.test-letter-not-attempted {
+    color: #f9a825;
+}

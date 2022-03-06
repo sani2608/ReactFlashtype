@@ -8,7 +8,9 @@ const TypingChallengeContainer = ({
     characters,
     wpm,
     timeRemaining,
-    timerStarted
+    timerStarted,
+    testInfo,
+    onInputChange
 }) => {
     return (
         <div className="typing-challenge-container">
@@ -22,7 +24,10 @@ const TypingChallengeContainer = ({
                 <TypingChallenge
                     selectedParagraph={selectedParagraph}
                     timeRemaining={timeRemaining}
-                    timerStarted={timerStarted} />
+                    timerStarted={timerStarted}
+                    testInfo={testInfo}
+                    onInputChange={onInputChange}
+                     />
             </div>
         </div>
     );

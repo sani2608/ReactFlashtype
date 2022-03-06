@@ -10,7 +10,9 @@ export const TestContainer = ({
     characters,
     wpm,
     timeRemaining,
-    timerStarted
+    timerStarted,
+    testInfo,
+    onInputChange
 }) => {
     // let timeRemaining = 5;
 
@@ -25,6 +27,8 @@ export const TestContainer = ({
                         timeRemaining={timeRemaining}
                         timerStarted={timerStarted}
                         selectedParagraph={selectedParagraph}
+                        testInfo={testInfo}
+                        onInputChange={onInputChange}
                     />
                 ) : (
                     <div className='try-again-cont'>

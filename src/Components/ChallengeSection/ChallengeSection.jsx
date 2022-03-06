@@ -9,7 +9,9 @@ export const ChallengeSection = ({
     characters,
     wpm,
     timeRemaining,
-    timerStarted
+    timerStarted,
+    testInfo,
+    onInputChange
 }) => {
     return (
         <div className="challenge-section-container">
@@ -23,6 +25,8 @@ export const ChallengeSection = ({
                 timeRemaining={timeRemaining}
                 timerStarted={timerStarted}
                 selectedParagraph={selectedParagraph}
+                testInfo={testInfo}
+                onInputChange={onInputChange}
             />
         </div>
     )
