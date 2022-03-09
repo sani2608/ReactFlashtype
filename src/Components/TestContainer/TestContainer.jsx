@@ -12,7 +12,8 @@ export const TestContainer = ({
     timeRemaining,
     timerStarted,
     testInfo,
-    onInputChange
+    onInputChange,
+    startAgain
 }) => {
     // let timeRemaining = 5;
 
@@ -36,6 +37,8 @@ export const TestContainer = ({
                                 words={words}
                                 characters={characters}
                                 wpm={wpm}
+                                startAgain={startAgain}
+
                             />
                     </div>
 
